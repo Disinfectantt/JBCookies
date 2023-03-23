@@ -7,9 +7,9 @@ use Joomla\CMS\Filesystem\Folder;
 use Joomla\CMS\Version;
 use Joomla\CMS\Language\Text;
 
-class mod_jbcookiesInstallerScript {
+class mod_jbcookies_modifiedInstallerScript {
 	
-	protected $extension = 'mod_jbcookies';
+	protected $extension = 'mod_jbcookies_modified';
 	
 	function install( $parent ) {
 		$lang = Factory::getLanguage();
@@ -52,7 +52,7 @@ class mod_jbcookiesInstallerScript {
 		$this->release = $installer->getManifest()->version;
 		
 		if ($this->release <= '3.1.6') {
-			$pathSite = JPATH_SITE.DIRECTORY_SEPARATOR.'modules'.DIRECTORY_SEPARATOR.'mod_jbcookies';
+			$pathSite = JPATH_SITE.DIRECTORY_SEPARATOR.'modules'.DIRECTORY_SEPARATOR.'mod_jbcookies_modified';
 				
 			// Eliminem Arxius innecesaris
 			$files = array($pathSite.'/tmpl/custom.php', $pathSite.'/tmpl/decline.php', $pathSite.'/tmpl/default_decline.php');
@@ -61,23 +61,23 @@ class mod_jbcookiesInstallerScript {
 		}
 		
 		if ($this->release <= '4.0.0') {
-			$pathSite = JPATH_SITE.DIRECTORY_SEPARATOR.'modules'.DIRECTORY_SEPARATOR.'mod_jbcookies';
+			$pathSite = JPATH_SITE.DIRECTORY_SEPARATOR.'modules'.DIRECTORY_SEPARATOR.'mod_jbcookies_modified';
 		
 			// Eliminem Arxius innecesaris
 			$files = array($pathSite.'/index.html', $pathSite.'/helper.php', $pathSite.'/script.install.php',
 								$pathSite.'/tmpl/index.html',
 								$pathSite.'/language/index.html',
-									$pathSite.'/language/ca-ES/index.html', $pathSite.'/language/ca-ES/ca-ES.mod_jbcookies.ini', $pathSite.'/language/ca-ES/ca-ES.mod_jbcookies.sys.ini',
-									$pathSite.'/language/de-DE/index.html', $pathSite.'/language/de-DE/de-DE.mod_jbcookies.ini', $pathSite.'/language/de-DE/de-DE.mod_jbcookies.sys.ini',
-									$pathSite.'/language/el-GR/index.html', $pathSite.'/language/el-GR/el-GR.mod_jbcookies.ini', $pathSite.'/language/el-GR/el-GR.mod_jbcookies.sys.ini',
-									$pathSite.'/language/en-GB/index.html', $pathSite.'/language/en-GB/en-GB.mod_jbcookies.ini', $pathSite.'/language/en-GB/en-GB.mod_jbcookies.sys.ini',
-									$pathSite.'/language/es-ES/index.html', $pathSite.'/language/es-ES/es-ES.mod_jbcookies.ini', $pathSite.'/language/es-ES/es-ES.mod_jbcookies.sys.ini',
-									$pathSite.'/language/fr-FR/index.html', $pathSite.'/language/fr-FR/fr-FR.mod_jbcookies.ini', $pathSite.'/language/fr-FR/fr-FR.mod_jbcookies.sys.ini',
-									$pathSite.'/language/it-IT/index.html', $pathSite.'/language/it-IT/it-IT.mod_jbcookies.ini', $pathSite.'/language/it-IT/it-IT.mod_jbcookies.sys.ini',
-									$pathSite.'/language/nl-NL/index.html', $pathSite.'/language/nl-NL/nl-NL.mod_jbcookies.ini', $pathSite.'/language/nl-NL/nl-NL.mod_jbcookies.sys.ini',
-									$pathSite.'/language/pl-PL/index.html', $pathSite.'/language/pl-PL/pl-PL.mod_jbcookies.ini', $pathSite.'/language/pl-PL/pl-PL.mod_jbcookies.sys.ini',
-									$pathSite.'/language/pt-PT/index.html', $pathSite.'/language/pt-PT/pt-PT.mod_jbcookies.ini', $pathSite.'/language/pt-PT/pt-PT.mod_jbcookies.sys.ini',
-									$pathSite.'/language/sv-SE/index.html', $pathSite.'/language/sv-SE/sv-SE.mod_jbcookies.ini', $pathSite.'/language/sv-SE/sv-SE.mod_jbcookies.sys.ini');
+									$pathSite.'/language/ca-ES/index.html', $pathSite.'/language/ca-ES/ca-ES.mod_jbcookies_modified.ini', $pathSite.'/language/ca-ES/ca-ES.mod_jbcookies_modified.sys.ini',
+									$pathSite.'/language/de-DE/index.html', $pathSite.'/language/de-DE/de-DE.mod_jbcookies_modified.ini', $pathSite.'/language/de-DE/de-DE.mod_jbcookies_modified.sys.ini',
+									$pathSite.'/language/el-GR/index.html', $pathSite.'/language/el-GR/el-GR.mod_jbcookies_modified.ini', $pathSite.'/language/el-GR/el-GR.mod_jbcookies_modified.sys.ini',
+									$pathSite.'/language/en-GB/index.html', $pathSite.'/language/en-GB/en-GB.mod_jbcookies_modified.ini', $pathSite.'/language/en-GB/en-GB.mod_jbcookies_modified.sys.ini',
+									$pathSite.'/language/es-ES/index.html', $pathSite.'/language/es-ES/es-ES.mod_jbcookies_modified.ini', $pathSite.'/language/es-ES/es-ES.mod_jbcookies_modified.sys.ini',
+									$pathSite.'/language/fr-FR/index.html', $pathSite.'/language/fr-FR/fr-FR.mod_jbcookies_modified.ini', $pathSite.'/language/fr-FR/fr-FR.mod_jbcookies_modified.sys.ini',
+									$pathSite.'/language/it-IT/index.html', $pathSite.'/language/it-IT/it-IT.mod_jbcookies_modified.ini', $pathSite.'/language/it-IT/it-IT.mod_jbcookies_modified.sys.ini',
+									$pathSite.'/language/nl-NL/index.html', $pathSite.'/language/nl-NL/nl-NL.mod_jbcookies_modified.ini', $pathSite.'/language/nl-NL/nl-NL.mod_jbcookies_modified.sys.ini',
+									$pathSite.'/language/pl-PL/index.html', $pathSite.'/language/pl-PL/pl-PL.mod_jbcookies_modified.ini', $pathSite.'/language/pl-PL/pl-PL.mod_jbcookies_modified.sys.ini',
+									$pathSite.'/language/pt-PT/index.html', $pathSite.'/language/pt-PT/pt-PT.mod_jbcookies_modified.ini', $pathSite.'/language/pt-PT/pt-PT.mod_jbcookies_modified.sys.ini',
+									$pathSite.'/language/sv-SE/index.html', $pathSite.'/language/sv-SE/sv-SE.mod_jbcookies_modified.ini', $pathSite.'/language/sv-SE/sv-SE.mod_jbcookies_modified.sys.ini');
 		
 			File::delete($files);
 			

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package			Joomla.Site
- * @subpackage		Modules - mod_jbcookies
+ * @subpackage		Modules - mod_jbcookies_modified
  * 
  * @author			JoomBall! Project
  * @link			http://www.joomball.com
@@ -9,7 +9,7 @@
  * @license			GNU/GPL, http://www.gnu.org/licenses/gpl-3.0.html
  */
 
-namespace JB\Module\JBCookies\Site\Field;
+namespace JB\Module\JBCookies_modified\Site\Field;
 
 \defined('_JEXEC') or die;
 

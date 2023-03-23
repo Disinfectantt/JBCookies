@@ -1,6 +1,13 @@
 # JBCookies
 JBCookies displays information about the use of cookies for Joomla 4. The module is ready to support any multilanguage page.
 
+# Differences from the original
+<ul>
+<li>Removed jquery for bootstrap 5</li>
+<li>Fixed bootstrap modal window in joomla 4</li>
+<li>If deleting cookies is disabled and they are accepted, the extension markup will not load</li>
+</ul>
+<hr>
 <img src="http://www.joomball.com/images/template/toolbar/icon-256-jbcookies.png" alt="JBCookies">
 <h3>Product details</h3>
 <p><strong>Package:</strong>&nbsp; <img src="http://www.joomball.com/images/template/ext_mod.png" alt="Module"> <em><br></em></p>

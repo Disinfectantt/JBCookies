@@ -1,7 +1,7 @@
 <?php
 /**
  * @package			Joomla.Site
- * @subpackage		Modules - mod_jbcookies
+ * @subpackage		Modules - mod_jbcookies_modified
  * 
  * @author			JoomBall! Project
  * @link			http://www.joomball.com
@@ -87,7 +87,7 @@ use Joomla\CMS\Language\Text;
 	<?php if($show_info and !$aLink) : ?>
 	    <!-- Modal -->
 	    <?php if($framework_version == 5) : // For Bootstrap 5 ?>
-			<div class="modal robots-noindex robots-nofollow robots-nocontent" id="jbcookies" tabindex="-1">
+			<div class="modal robots-noindex robots-nofollow robots-nocontent fade" id="jbcookies" tabindex="-1">
 				<div class="modal-dialog modal-lg">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -104,7 +104,7 @@ use Joomla\CMS\Language\Text;
 				</div>
 			</div>
 		<?php elseif(in_array($framework_version, array(3,4))) : // For Bootstrap 3-4 ?>
-			<div class="modal robots-noindex robots-nofollow robots-nocontent" id="jbcookies" tabindex="-1" role="dialog">
+			<div class="modal robots-noindex robots-nofollow robots-nocontent fade" id="jbcookies" tabindex="-1" role="dialog">
 				<div class="modal-dialog modal-lg" role="document">
 					<div class="modal-content">
 						<div class="modal-header">

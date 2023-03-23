@@ -1,7 +1,7 @@
 <?php
 /**
  * @package			Joomla.Site
- * @subpackage		Modules - mod_jbcookies
+ * @subpackage		Modules - mod_jbcookies_modified
  * 
  * @author			JoomBall! Project
  * @link			http://www.joomball.com

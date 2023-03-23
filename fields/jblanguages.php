@@ -1,7 +1,7 @@
 <?php
 /**
  * @package			Joomla.Site
- * @subpackage		Modules - mod_jbcookies
+ * @subpackage		Modules - mod_jbcookies_modified
  * 
  * @author			JoomBall! Project
  * @link			http://www.joomball.com
@@ -29,7 +29,7 @@ class JFormFieldJBLanguages extends JFormField {
     }
 
     protected function getInput() {
-    	defined('JPATH_JBCOOKIES') or define('JPATH_JBCOOKIES', JPATH_SITE.DIRECTORY_SEPARATOR.'modules'.DIRECTORY_SEPARATOR.'mod_jbcookies');
+    	defined('JPATH_JBCOOKIES') or define('JPATH_JBCOOKIES', JPATH_SITE.DIRECTORY_SEPARATOR.'modules'.DIRECTORY_SEPARATOR.'mod_jbcookies_modified');
     	
     	// Including fallback code for HTML5 non supported browsers.
     	//		JHtml::_('jquery.framework');
@@ -44,14 +44,14 @@ class JFormFieldJBLanguages extends JFormField {
     	//		JHtml::_('behavior.modal', 'a.modal');
     	
     	// Translate placeholder text
-    	$hintTitle			= ' placeholder="' . Text::_('MOD_JBCOOKIES_LANG_TITLE') . '"';
-    	$hintText			= ' placeholder="' . Text::_('MOD_JBCOOKIES_LANG_TEXT') . '"';
-    	$hintHeader			= ' placeholder="' . Text::_('MOD_JBCOOKIES_LANG_HEADER') . '"';
-    	$hintBody			= ' placeholder="' . Text::_('MOD_JBCOOKIES_LANG_BODY') . '"';
-    	$hintDecline		= ' placeholder="' . Text::_('MOD_JBCOOKIES_LANG_DECLINE') . '"';
-    	$hintAliasButton	= ' placeholder="' . Text::_('MOD_JBCOOKIES_LANG_ALIAS_BUTTON') . '"';
-    	$hintAliasLink		= ' placeholder="' . Text::_('MOD_JBCOOKIES_LANG_ALIAS_LINK') . '"';
-    	$hintAlink			= ' placeholder="' . Text::_('MOD_JBCOOKIES_LANG_ALINK') . '"';
+    	$hintTitle			= ' placeholder="' . Text::_('MOD_JBCOOKIES_MODIFIED_LANG_TITLE') . '"';
+    	$hintText			= ' placeholder="' . Text::_('MOD_JBCOOKIES_MODIFIED_LANG_TEXT') . '"';
+    	$hintHeader			= ' placeholder="' . Text::_('MOD_JBCOOKIES_MODIFIED_LANG_HEADER') . '"';
+    	$hintBody			= ' placeholder="' . Text::_('MOD_JBCOOKIES_MODIFIED_LANG_BODY') . '"';
+    	$hintDecline		= ' placeholder="' . Text::_('MOD_JBCOOKIES_MODIFIED_LANG_DECLINE') . '"';
+    	$hintAliasButton	= ' placeholder="' . Text::_('MOD_JBCOOKIES_MODIFIED_LANG_ALIAS_BUTTON') . '"';
+    	$hintAliasLink		= ' placeholder="' . Text::_('MOD_JBCOOKIES_MODIFIED_LANG_ALIAS_LINK') . '"';
+    	$hintAlink			= ' placeholder="' . Text::_('MOD_JBCOOKIES_MODIFIED_LANG_ALINK') . '"';
     	
     	// Initialize some field attributes.
     	$class        = !empty($this->class) ? ' class="' . $this->class . '"' : '';
@@ -91,7 +91,7 @@ class JFormFieldJBLanguages extends JFormField {
     		
     		
     		$article	= array();
-    		$ini = JPATH_JBCOOKIES.DIRECTORY_SEPARATOR.'language'.DIRECTORY_SEPARATOR.$lang['tag'].DIRECTORY_SEPARATOR.'mod_jbcookies.ini';
+    		$ini = JPATH_JBCOOKIES.DIRECTORY_SEPARATOR.'language'.DIRECTORY_SEPARATOR.$lang['tag'].DIRECTORY_SEPARATOR.'mod_jbcookies_modified.ini';
     		
     		if (empty($params[$lang['tag']])) {
     			$params[$lang['tag']]['title']			= '';
@@ -177,12 +177,12 @@ class JFormFieldJBLanguages extends JFormField {
     		if (is_file($ini)) {
     			$html .= '<div class="alert alert-info alert-dismissible" role="alert">';
     			//				$html .= '<button type="button" class="btn-close" data-bs-dismiss="alert"></button>';
-    			$html .= Text::_('MOD_JBCOOKIES_MSG_LANG_INFO');
+    			$html .= Text::_('MOD_JBCOOKIES_MODIFIED_MSG_LANG_INFO');
     			$html .= '</div>';
     		} else {
     			$html .= '<div class="alert alert-warning alert-dismissible" role="alert">';
     			//				$html .= '<button type="button" class="btn-close" data-bs-dismiss="alert"></button>';
-    			$html .= Text::_('MOD_JBCOOKIES_MSG_LANG_BLOCK');
+    			$html .= Text::_('MOD_JBCOOKIES_MODIFIED_MSG_LANG_BLOCK');
     			$html .= '</div>';
     		}
     		

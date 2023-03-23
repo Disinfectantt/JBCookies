@@ -1,7 +1,7 @@
 .jb-cookie {
-	position: fixed!important;
+	position: fixed !important;
 	z-index: 1035;
-	width: 100%!important;
+	width: 100% !important;
 	height: auto;
 	text-align: center;
 	display: none;
@@ -9,10 +9,10 @@
 	padding: 15px 0;
 	left: 0;
 	right: 0;
-	float: none!important;
+	float: none !important;
 	text-shadow: none;
-	border-radius: 0!important;
-	margin: 0 auto!important;
+	border-radius: 0 !important;
+	margin: 0 auto !important;
 }
 
 .jb-cookie.top {
@@ -27,7 +27,7 @@
 	width: 100%;
 	height: 100%;
 	top: 0;
-	left: 0; 
+	left: 0;
 	opacity: 0.9;
 	filter: alpha(opacity=90);
 	position: absolute;
@@ -62,12 +62,12 @@
 	font-size: 14px;
 	margin-bottom: 5px;
 	padding: 0;
-	float: none!important;
+	float: none !important;
 }
 
 .jb-cookie p a {
 	cursor: pointer;
-	float: none!important;
+	float: none !important;
 }
 
 .jb-accept {
@@ -76,7 +76,7 @@
 	margin: 5px auto;
 	min-width: 100px;
 	border-radius: 4px;
-	float: none!important;
+	float: none !important;
 }
 
 .jb-accept:hover {
@@ -88,35 +88,43 @@
 }
 
 /* COLORS LINKS */
-.jb-cookie.top.blue .jb-cookie-bg.white, .jb-cookie.top.blue .jb-cookie-bg.black {
+.jb-cookie.top.blue .jb-cookie-bg.white,
+.jb-cookie.top.blue .jb-cookie-bg.black {
 	border-bottom: 1px solid #0089f2;
 }
 
-.jb-cookie.top.green .jb-cookie-bg.white, .jb-cookie.top.green .jb-cookie-bg.black {
+.jb-cookie.top.green .jb-cookie-bg.white,
+.jb-cookie.top.green .jb-cookie-bg.black {
 	border-bottom: 1px solid #52a552;
 }
 
-.jb-cookie.top.orange .jb-cookie-bg.white, .jb-cookie.top.orange .jb-cookie-bg.black {
+.jb-cookie.top.orange .jb-cookie-bg.white,
+.jb-cookie.top.orange .jb-cookie-bg.black {
 	border-bottom: 1px solid #e88a05;
 }
 
-.jb-cookie.top.red .jb-cookie-bg.white, .jb-cookie.top.red .jb-cookie-bg.black {
+.jb-cookie.top.red .jb-cookie-bg.white,
+.jb-cookie.top.red .jb-cookie-bg.black {
 	border-bottom: 1px solid #dd2f26;
 }
 
-.jb-cookie.bottom.blue .jb-cookie-bg.white, .jb-cookie.bottom.blue .jb-cookie-bg.black {
+.jb-cookie.bottom.blue .jb-cookie-bg.white,
+.jb-cookie.bottom.blue .jb-cookie-bg.black {
 	border-top: 1px solid #0089f2;
 }
 
-.jb-cookie.bottom.green .jb-cookie-bg.white, .jb-cookie.bottom.green .jb-cookie-bg.black {
+.jb-cookie.bottom.green .jb-cookie-bg.white,
+.jb-cookie.bottom.green .jb-cookie-bg.black {
 	border-top: 1px solid #52a552;
 }
 
-.jb-cookie.bottom.orange .jb-cookie-bg.white, .jb-cookie.bottom.orange .jb-cookie-bg.black {
+.jb-cookie.bottom.orange .jb-cookie-bg.white,
+.jb-cookie.bottom.orange .jb-cookie-bg.black {
 	border-top: 1px solid #e88a05;
 }
 
-.jb-cookie.bottom.red .jb-cookie-bg.white, .jb-cookie.bottom.red .jb-cookie-bg.black {
+.jb-cookie.bottom.red .jb-cookie-bg.white,
+.jb-cookie.bottom.red .jb-cookie-bg.black {
 	border-top: 1px solid #dd2f26;
 }
 
@@ -164,4 +172,70 @@
 /* MODAL */
 #jbcookies {
 	color: #333;
+}
+
+@-webkit-keyframes fadeInUp {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		        transform: translate3d(0, 100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		        transform: translate3d(0, 100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
+	}
+}
+
+.fadeInUp {
+	-webkit-animation-name: fadeInUp;
+	        animation-name: fadeInUp;
+	-webkit-animation-duration: .4s;
+	        animation-duration: .4s;
+}
+
+@-webkit-keyframes fadeOutDown {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		        transform: translate3d(0, 100%, 0);
+	}
+}
+
+@keyframes fadeOutDown {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		        transform: translate3d(0, 100%, 0);
+	}
+}
+
+.fadeOutDown {
+	-webkit-animation-name: fadeOutDown;
+	        animation-name: fadeOutDown;
+	-webkit-animation-duration: .4s;
+	        animation-duration: .4s;
 }

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade" version="4.0.0">
+	
+	<name>mod_jbcookies_modified</name>
+	<author>JoomBall! Project</author>
+	<creationDate>August 2014</creationDate>
+	<authorEmail>info@joomball.com</authorEmail>
+	<authorUrl>http://www.joomball.com</authorUrl>
+	<copyright>Copyright © 2014-2021 JoomBall! Project - All Rights Reserved</copyright>
+	<license>GNU/GPL, http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>4.0.3</version>
+	<description>MOD_JBCOOKIES_MODIFIED_XML_DESCRIPTION</description>
+	<namespace path="src">JB\Module\JBCookies_modified</namespace>
+	
+    <media folder="media/jbmedia" destination="jbmedia">
+		<folder>css</folder>
+		<folder>language</folder>
+	</media>
+	    
+    <files>
+		<filename module="mod_jbcookies_modified">mod_jbcookies_modified.php</filename>
+		<filename>CHANGELOG.txt</filename>
+		
+		<folder>fields</folder>
+		<folder>language</folder>
+		<folder>src</folder>
+		<folder>tmpl</folder>
+	</files>
+
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_jbcookies_modified/fields">
+			<fieldset name="basic" addfieldprefix="JB\Module\JBCookies_modified\Site\Field">
+			
+				<field
+					name="header_butttons"
+					type="jbbuttons"
+					url_site_joomball="https://www.joomball.com"
+					url_site_joomball_download="https://github.com/JoomBall/JBCookies/releases"
+					url_site_joomball_demo="https://www.joomball.com/extensiones/jbcookies"
+					url_site_joomla_extensions="https://extensions.joomla.org/extensions/extension/site-management/cookie-control/joomball-cookies/" />
+				
+				<field
+					name="note_vote_msg"
+					type="jbmessage"
+					message="note"
+					label="JBVOTE_TITLE" />
+				
+				<field
+					name="version_msg"
+					type="jbmessage"
+					message="version"
+					path="../modules/mod_jbcookies_modified/"
+					xml="mod_jbcookies_modified.xml"
+					extension_name="mod_jbcookies_modified" />
+					
+				<field
+					name="position"
+					type="list"
+					default="bottom"
+					label="COM_MODULES_FIELD_POSITION_LABEL" >
+					
+					<option value="top">JGLOBAL_TOP</option>
+					<option value="bottom">JGLOBAL_BLOG_DOWN_OPTION</option>
+				</field>
+				
+				<field
+                    name="color_option"
+                    type="radio"
+					default="selectable"
+					class="btn-group btn-group-yesno"
+                    label="MOD_JBCOOKIES_MODIFIED_GLOBAL_COLORS"
+                    description="" >
+                    
+                    <option value="selectable">MOD_JBCOOKIES_MODIFIED_GLOBAL_SELECTABLE</option>
+					<option value="customized">MOD_JBCOOKIES_MODIFIED_GLOBAL_CUSTOMIZED</option>
+                </field>
+				
+                <field
+                    name="color_background"
+                    type="groupedlist"
+                    default="black"
+                    label="MOD_JBCOOKIES_MODIFIED_FIELD_COLOR_BACKGROUND"
+                    description=""
+                    showon="color_option:selectable" >
+                    
+                    <group label="JALL">
+						<option value="white">MOD_JBCOOKIES_MODIFIED_GLOBAL_WHITE</option>
+						<option value="black">MOD_JBCOOKIES_MODIFIED_GLOBAL_BLACK</option>
+                    </group>
+                    <group label="Bootstrap 3-4-5">
+						<option value="bg-primary">Primary</option>
+						<option value="bg-secondary">Secondary</option>
+						<option value="bg-success">Success</option>
+						<option value="bg-danger">Danger</option>
+						<option value="bg-warning">Warning</option>
+						<option value="bg-info">Info</option>
+						<option value="bg-light">Light</option>
+						<option value="bg-dark">Dark</option>
+						<option value="bg-white">White</option>
+						<option value="bg-transparent">Transparent</option>
+				    </group>
+                </field>
+                
+                <field
+                    name="color_links"
+                    type="groupedlist"
+                    default="blue"
+                    label="MOD_JBCOOKIES_MODIFIED_FIELD_COLOR_LINKS"
+                    description=""
+                    showon="color_option:selectable" >
+                    
+                    <group label="JALL">
+                    	<option value="blue">MOD_JBCOOKIES_MODIFIED_GLOBAL_BLUE</option>
+                    	<option value="green">MOD_JBCOOKIES_MODIFIED_GLOBAL_GREEN</option>
+                    	<option value="orange">MOD_JBCOOKIES_MODIFIED_GLOBAL_ORANGE</option>
+                    	<option value="red">MOD_JBCOOKIES_MODIFIED_GLOBAL_RED</option>
+                    </group>
+                    <group label="Bootstrap">
+						<option value="btn-primary">Primary</option>
+						<option value="btn-secondary">Secondary</option>
+						<option value="btn-success">Success</option>
+						<option value="btn-danger">Danger</option>
+						<option value="btn-warning">Warning</option>
+						<option value="btn-info">Info</option>
+						<option value="btn-light">Light</option>
+						<option value="btn-dark">Dark</option>
+						<option value="btn-transparent">Transparent</option>
+				    </group>
+                </field>
+                
+                <field
+                    name="color_background_custom"
+                    type="color"
+                    default="#000000"
+                    label="MOD_JBCOOKIES_MODIFIED_FIELD_COLOR_BACKGROUND"
+                    description=""
+                    showon="color_option:customized" />
+                
+                <field
+                    name="color_text_custom"
+                    type="color"
+                    default="#ffffff"
+                    label="MOD_JBCOOKIES_MODIFIED_FIELD_COLOR_TEXT_LABEL"
+                    description=""
+                    showon="color_option:customized" />
+				
+				<field
+                    name="color_links_custom"
+                    type="color"
+                    default="#37a4fc"
+                    label="MOD_JBCOOKIES_MODIFIED_FIELD_COLOR_LINKS"
+                    description=""
+                    showon="color_option:customized" />
+				
+				 <field
+                    name="btn_start_bgcolor_custom"
+                    type="color"
+                    default="#37a4fc"
+                    label="MOD_JBCOOKIES_MODIFIED_FIELD_BTN_START_BGCOLOR_LABEL"
+                    description=""
+                    showon="color_option:customized" />
+				
+				 <field
+                    name="btn_end_bgcolor_custom"
+                    type="color"
+                    default="#025fab"
+                    label="MOD_JBCOOKIES_MODIFIED_FIELD_BTN_END_BGCOLOR_LABEL"
+                    description=""
+                    showon="color_option:customized" />
+                    
+				<field
+                    name="btn_border_color_custom"
+                    type="color"
+                    default="#024175"
+                    label="MOD_JBCOOKIES_MODIFIED_FIELD_BTN_BORDER_COLOR_LABEL"
+                    description=""
+                    showon="color_option:customized" />
+                    
+				 <field
+                    name="btn_text_color_custom"
+                    type="color"
+                    default="#ffffff"
+                    label="MOD_JBCOOKIES_MODIFIED_FIELD_BTN_TEXT_COLOR_LABEL"
+                    description=""
+                    showon="color_option:customized" />
+                    
+				<field
+                    name="btn_width_custom"
+                    type="number"
+                    hint="100"
+                    label="MOD_JBCOOKIES_MODIFIED_FIELD_BTN_WIDTH_LABEL"
+                    description=""
+                    showon="color_option:customized" />
+                    
+				<field
+                    name="btn_height_custom"
+                    type="number"
+                    hint="30"
+                    label="MOD_JBCOOKIES_MODIFIED_FIELD_BTN_HEIGHT_LABEL"
+                    description=""
+                    showon="color_option:customized" />
+                
+                <field
+                    name="color_spacer"
+                    type="spacer"
+					hr="true" >
+				</field>	
+                
+                <field
+                    name="show_info"
+                    type="radio"
+					default="1"
+					layout="joomla.form.field.radio.switcher"
+					label="MOD_JBCOOKIES_MODIFIED_FIELD_SHOW_INFO_LABEL"
+                    description="MOD_JBCOOKIES_MODIFIED_FIELD_SHOW_INFO_DESC"
+                    filter="integer" >
+                    
+                    <option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+                </field>
+                
+                <field
+                    name="show_article_modal"
+                    type="radio"
+					default="1"
+					label="MOD_JBCOOKIES_MODIFIED_FIELD_SHOW_ATICLE_MODAL_LABEL"
+                    description="MOD_JBCOOKIES_MODIFIED_FIELD_SHOW_ATICLE_MODAL_DESC"
+                    layout="joomla.form.field.radio.switcher"
+					filter="integer"
+					showon="show_info:1" >
+                    
+                    <option value="0">JNO</option>
+					<option value="1">JYES</option>
+                </field>
+                
+                <field
+                    name="modal"
+                    type="radio"
+					default="bootstrap"
+					class="btn-group btn-group-yesno"
+                    label="MOD_JBCOOKIES_MODIFIED_FIELD_FRAMEWORK_LABEL"
+                    description="MOD_JBCOOKIES_MODIFIED_FIELD_FRAMEWORK_DESC"
+                    showon="show_info:1[AND]show_article_modal:1" >
+                    
+                    <option value="bootstrap">Bootstrap</option>
+					<option value="uikit">Uikit</option>
+                </field>
+                
+                 <field
+                    name="bootstrap_version"
+                    type="radio"
+					default="5"
+					class="btn-group btn-group-yesno"
+                    label="JVERSION"
+                    description=""
+                    showon="show_info:1[AND]show_article_modal:1[AND]modal:bootstrap" >
+                    
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+                </field>
+                
+                <field
+                    name="options_spacer"
+                    type="spacer"
+					hr="true" >
+				</field>
+				
+				<field
+                    name="subdomain_alias"
+                    type="radio"
+					default="0"
+					layout="joomla.form.field.radio.switcher"
+					filter="integer"
+					label="MOD_JBCOOKIES_MODIFIED_FIELD_DOMAIN_ALIAS_LABEL"
+                    description="MOD_JBCOOKIES_MODIFIED_FIELD_DOMAIN_ALIAS_DESC" >
+                    
+                    <option value="0">JNO</option>
+					<option value="1">JYES</option>
+                </field>
+                
+				<field
+                    name="duration_cookie_days"
+                    type="number"
+                    hint="90"
+                    label="MOD_JBCOOKIES_MODIFIED_FIELD_DURATION_COOKIE_DAYS_LABEL"
+                    description="" />
+                
+                <field
+                    name="show_decline"
+                    type="radio"
+					default="1"
+					layout="joomla.form.field.radio.switcher"
+					filter="integer"
+					label="MOD_JBCOOKIES_MODIFIED_FIELD_SHOW_DECLINE_LABEL"
+                    description="MOD_JBCOOKIES_MODIFIED_FIELD_SHOW_DECLINE_DESC" >
+                    
+                    <option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+                </field>
+                
+                <field
+                    name="decline_icon"
+                    type="text"
+					hint="EX: fas fa-cookie"
+					label="MOD_JBCOOKIES_MODIFIED_FIELD_DECLINE_ICON_LABEL"
+                    description=""
+                    showon="show_decline:1" />
+                
+                <field
+                    name="show_decline_description"
+                    type="radio"
+					default="1"
+					layout="joomla.form.field.radio.switcher"
+					filter="integer"
+					label="MOD_JBCOOKIES_MODIFIED_FIELD_SHOW_DECLINE_DESCRIPTION_LABEL"
+                    description=""
+                    showon="show_decline:1" >
+                    
+                    <option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+                </field>
+                
+                <field
+                    name="decline_btn_link_color"
+                    type="color"
+                    default="#37a4fc"
+                    label="MOD_JBCOOKIES_MODIFIED_FIELD_COLOR_LINKS"
+                    description=""
+                    showon="show_decline:1" />
+                 
+            </fieldset>
+			
+			<fieldset name="languages" label="MOD_JBCOOKIES_MODIFIED_LANGUAGES_FIELDSET_LABEL">
+				
+				<field
+					name="lang"
+					type="jblanguages"
+					class="form-control" >
+				</field>
+                   
+            </fieldset>
+            
+            <fieldset name="advanced">
+				
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					class="form-select"
+					validate="moduleLayout" />
+				
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					validate="CssIdentifier" />
+					
+				<field
+					name="cache"
+					type="list"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					default="1"
+					filter="integer"
+					validate="options"
+					>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="number"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					default="900"
+					filter="integer" />
+					
+			</fieldset>
+			
+		</fields>
+	</config>
+	
+	<!-- Installation / uninstallation script file -->
+	<scriptfile>script.php</scriptfile>
+	
+</extension>

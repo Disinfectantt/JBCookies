@@ -1,7 +1,7 @@
 <?php
 /**
  * @package			Joomla.Site
- * @subpackage		Modules - mod_jbcookies
+ * @subpackage		Modules - mod_jbcookies_modified
  * 
  * @author			JoomBall! Project
  * @link			http://www.joomball.com
@@ -37,15 +37,15 @@ class JFormFieldJBButtons extends JFormField {
     	endif;
     	
     	if ($url_site_joomball_download) :
-    	$html .= '<a class="btn btn-success" href="'.$url_site_joomball_download.'" target="_blank" '.$style.'><span class="icon-download"></span> '.Text::_('MOD_JBCOOKIES_GLOBAL_DOWNLOAD').'</a>';
+    	$html .= '<a class="btn btn-success" href="'.$url_site_joomball_download.'" target="_blank" '.$style.'><span class="icon-download"></span> '.Text::_('MOD_JBCOOKIES_MODIFIED_GLOBAL_DOWNLOAD').'</a>';
     	endif;
     	
     	if ($url_site_joomball_demo) :
-    	$html .= '<a class="btn btn-primary" href="'.$url_site_joomball_demo.'" target="_blank" '.$style.'><span class="icon-eye"></span> '.Text::_('MOD_JBCOOKIES_GLOBAL_DEMO').'</a>';
+    	$html .= '<a class="btn btn-primary" href="'.$url_site_joomball_demo.'" target="_blank" '.$style.'><span class="icon-eye"></span> '.Text::_('MOD_JBCOOKIES_MODIFIED_GLOBAL_DEMO').'</a>';
     	endif;
     	
     	if ($url_site_joomla_extensions) :
-    	$html .= '<a class="btn btn-primary" href="'.$url_site_joomla_extensions.'" target="_blank" '.$style.'><span class="icon-joomla"></span> '.Text::_('MOD_JBCOOKIES_GLOBAL_VOTE_EXTENSION').'</a>';
+    	$html .= '<a class="btn btn-primary" href="'.$url_site_joomla_extensions.'" target="_blank" '.$style.'><span class="icon-joomla"></span> '.Text::_('MOD_JBCOOKIES_MODIFIED_GLOBAL_VOTE_EXTENSION').'</a>';
     	endif;
     	
     	return  $html;
